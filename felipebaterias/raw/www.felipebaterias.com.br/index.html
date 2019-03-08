@@ -1,0 +1,984 @@
+<!doctype html >
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt" class="">
+<head>
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ========= Meta Tags ========= -->
+<script>
+        try {
+    if(navigator.serviceWorker && navigator.serviceWorker.getRegistrations && location.protocol === 'https:') {
+        // remove all service workers
+        navigator.serviceWorker.getRegistrations().then(function(registrations) {
+            if(registrations && registrations.length) {
+                console.log('unregistering service workers')
+                registrations.forEach(function(registration) {
+                    registration.unregister();
+                });
+            }
+         });
+        // clear caches
+        if(caches) {
+            caches.keys().then(function(keyList) {
+                if(keyList && keyList.length) {
+                    console.log('deleting caches')
+                    keyList.forEach(function(key) {
+                        if (key && key.indexOf('druntime') === 0) {
+                            caches.delete(key);
+                        }
+                    });
+                }
+              })
+        }
+    }
+} catch (err) {
+    // not a secured location
+}</script>
+    
+
+<meta http-equiv="Content-type" content="text/html;charset=utf-8">
+<meta charset="utf-8">
+
+<link rel="canonical" href="index.html">
+
+<meta id="view" name="viewport"
+        content=", initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0, viewport-fit=cover" />
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<!--Add favorites icons-->
+
+<link rel="apple-touch-icon" href="https://irp-cdn.multiscreensite.com/4169e4fb/dms3rep/multi/Untitled-1.png" />
+
+<link rel="icon" type="image/x-icon" href="https://irp-cdn.multiscreensite.com/4169e4fb/site_favicon_16_1535813361966.ico" />
+
+<!-- End favorite icons -->
+
+
+
+<!-- Prefetch Ecwid Javascript to speed up loading -->
+<link rel="prefetch" href="https://app.multiscreenstore.com/script.js?16169144"></link>
+
+
+<!-- render the required CSS and JS in the head section -->
+<script>
+
+    if(!window.requestIdleCallback) {
+        window.requestIdleCallback = function(fn) {
+            setTimeout(fn, 0);
+        }
+    }
+
+    function loadCSS(link) {
+        var urlParams = new URLSearchParams(window.location.search);
+        var noCSS = !!urlParams.get('nocss');
+        var cssTimeout = urlParams.get('cssTimeout') || 0;
+
+        if(noCSS) {
+            return;
+        }
+        requestIdleCallback(function() {
+            window.setTimeout(function() {
+                link.onload=null;
+                link.rel='stylesheet';
+                link.type='text/css'
+            }, parseInt(cssTimeout, 10));
+        });
+    }
+
+</script>
+<script>
+(function(n){"use strict";if(!n.l){n.l=function(){}}var o=loadCSS.t={};o.o=function(){var l;try{l=n.document.createElement("link").relList.supports("preload")}catch(e){l=false}return function(){return l}}();o.i=function(e){var l=e.media||"all";function enableStylesheet(){if(e.addEventListener){e.removeEventListener("load",enableStylesheet)}else if(e.attachEvent){e.detachEvent("onload",enableStylesheet)}e.setAttribute("onload",null);e.media=l}if(e.addEventListener){e.addEventListener("load",enableStylesheet)}else if(e.attachEvent){e.attachEvent("onload",enableStylesheet)}setTimeout(function(){e.rel="stylesheet";e.media="only x"});setTimeout(enableStylesheet,3e3)};o.s=function(){if(o.o()){return}var e=n.document.getElementsByTagName("link");for(var l=0;l<e.length;l++){var t=e[l];if(t.rel==="preload"&&t.getAttribute("as")==="style"&&!t.getAttribute("data-loadcss")){t.setAttribute("data-loadcss",true);o.i(t)}}};if(!o.o()){o.s();var e=n.setInterval(o.s,500);if(n.addEventListener){n.addEventListener("load",function(){o.s();n.clearInterval(e)})}else if(n.attachEvent){n.attachEvent("onload",function(){o.s();n.clearInterval(e)})}}if(typeof exports!=="undefined"){exports.l=loadCSS}else{n.l=loadCSS}})(typeof global!=="undefined"?global:this);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ========= CSS Section ========= -->
+<!-- Foundation CSS -->
+<link rel="stylesheet" type="text/css" href="_dm/s/rt/dist/css/d-css-foundation.min.css?version=2019-03-05T15_40_17" />
+
+
+<!-- Google Fonts Include -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <link type="text/css" rel="stylesheet" href="../fonts.googleapis.com/css?family=Cardo:100,200,300,400,500,600,700,800,900,100italic,200italic,300italic,400italic,500italic,600italic,700italic,800italic,900italic|Lato:100,200,300,400,500,600,700,800,900,100italic,200italic,300italic,4"  />
+
+    <link type="text/css" rel="stylesheet" href="../dd-cdn.multiscreensite.com/fonts/additional-fonts.css"  />
+
+
+<link rel="stylesheet" type="text/css" href="_dm/s/rt/dist/css/css-font-package.min.css?version=2019-03-05T15_40_17" />
+
+
+<!-- RT CSS Include d-css-runtime-desktop-one-package-new-->
+<link rel="stylesheet" type="text/css" href="_dm/s/rt/dist/css/d-css-runtime-desktop-one-package-new.min.css?version=2019-03-05T15_40_17" />
+
+<!-- End of RT CSS Include -->
+
+
+
+<!-- Site CSS -->
+<link type="text/css" rel="stylesheet" href="../irp-cdn.multiscreensite.com/4169e4fb/files/4169e4fb_1.min.css?v=125" id="siteGlobalCss" />
+
+
+<!-- additional css file per platform -->
+<link type="text/css" rel="stylesheet" href="_dm/s/rt/css/uol/uol-runtime.css?version=2019-03-05T15_40_17" />
+
+<style id="customWidgetStyle" type="text/css">
+    
+</style>
+<style id="innerPagesStyle" type="text/css">
+    
+</style>
+
+<style id="additionalGlobalCss" type="text/css">
+</style>
+
+
+<!-- Page CSS -->
+<link type="text/css" rel="stylesheet" href="../irp-cdn.multiscreensite.com/4169e4fb/files/4169e4fb_home_1.min.css?v=125" id="homeCssLink" />
+
+<style id="pagestyle" type="text/css">
+    
+</style>
+
+<style id="pagestyleDevice" type="text/css">
+    
+</style>
+
+<!--[if IE 7]><style>.fw-head.fw-logo img{max-width: 290px;}.dm_header .logo-div img{max-width: 290px;}</style><![endif]-->
+<!--[if IE 8]><style>.fw-head .fw-logo img{max-width: 290px;}.dm_header .logo-div img{max-width: 290px;}*#dm div.dmHeader{_height:90px;min-height:0px;}</style><![endif]-->
+
+
+<!-- ========= JS Section ========= -->
+
+<!-- Modernizr -->
+<script>
+    /* THIS FILE IS AUTO-GENERATED. SEE build/build-modernizr */
+
+/*! modernizr 3.5.0 (Custom Build) | MIT *
+ * https://modernizr.com/download/?-cssvwunit-flexbox-flexboxlegacy-flexboxtweener-flexwrap-passiveeventlisteners-supports-svg-setclasses-cssclassprefix:dm- !*/
+!function(e,t,n){function r(e,t){return typeof e===t}function s(){var e,t,n,s,o,i,a;for(var l in w)if(w.hasOwnProperty(l)){if(e=[],t=w[l],t.name&&(e.push(t.name.toLowerCase()),t.options&&t.options.aliases&&t.options.aliases.length))for(n=0;n<t.options.aliases.length;n++)e.push(t.options.aliases[n].toLowerCase());for(s=r(t.fn,"function")?t.fn():t.fn,o=0;o<e.length;o++)i=e[o],a=i.split("."),1===a.length?Modernizr[a[0]]=s:(!Modernizr[a[0]]||Modernizr[a[0]]instanceof Boolean||(Modernizr[a[0]]=new Boolean(Modernizr[a[0]])),Modernizr[a[0]][a[1]]=s),C.push((s?"":"no-")+a.join("-"))}}function o(e){var t=x.className,n=Modernizr._config.classPrefix||"";if(b&&(t=t.baseVal),Modernizr._config.enableJSClass){var r=new RegExp("(^|\\s)"+n+"no-js(\\s|$)");t=t.replace(r,"$1"+n+"js$2")}Modernizr._config.enableClasses&&(t+=" "+n+e.join(" "+n),b?x.className.baseVal=t:x.className=t)}function i(e,t){return!!~(""+e).indexOf(t)}function a(){return"function"!=typeof t.createElement?t.createElement(arguments[0]):b?t.createElementNS.call(t,"http://www.w3.org/2000/svg",arguments[0]):t.createElement.apply(t,arguments)}function l(){var e=t.body;return e||(e=a(b?"svg":"body"),e.fake=!0),e}function f(e,n,r,s){var o,i,f,u,d="modernizr",p=a("div"),c=l();if(parseInt(r,10))for(;r--;)f=a("div"),f.id=s?s[r]:d+(r+1),p.appendChild(f);return o=a("style"),o.type="text/css",o.id="s"+d,(c.fake?c:p).appendChild(o),c.appendChild(p),o.styleSheet?o.styleSheet.cssText=e:o.appendChild(t.createTextNode(e)),p.id=d,c.fake&&(c.style.background="",c.style.overflow="hidden",u=x.style.overflow,x.style.overflow="hidden",x.appendChild(c)),i=n(p,e),c.fake?(c.parentNode.removeChild(c),x.style.overflow=u,x.offsetHeight):p.parentNode.removeChild(p),!!i}function u(e){return e.replace(/([A-Z])/g,function(e,t){return"-"+t.toLowerCase()}).replace(/^ms-/,"-ms-")}function d(t,n,r){var s;if("getComputedStyle"in e){s=getComputedStyle.call(e,t,n);var o=e.console;if(null!==s)r&&(s=s.getPropertyValue(r));else if(o){var i=o.error?"error":"log";o[i].call(o,"getComputedStyle returning null, its possible modernizr test results are inaccurate")}}else s=!n&&t.currentStyle&&t.currentStyle[r];return s}function p(t,r){var s=t.length;if("CSS"in e&&"supports"in e.CSS){for(;s--;)if(e.CSS.supports(u(t[s]),r))return!0;return!1}if("CSSSupportsRule"in e){for(var o=[];s--;)o.push("("+u(t[s])+":"+r+")");return o=o.join(" or "),f("@supports ("+o+") { #modernizr { position: absolute; } }",function(e){return"absolute"==d(e,null,"position")})}return n}function c(e){return e.replace(/([a-z])-([a-z])/g,function(e,t,n){return t+n.toUpperCase()}).replace(/^-/,"")}function v(e,t,s,o){function l(){u&&(delete P.style,delete P.modElem)}if(o=r(o,"undefined")?!1:o,!r(s,"undefined")){var f=p(e,s);if(!r(f,"undefined"))return f}for(var u,d,v,m,g,y=["modernizr","tspan","samp"];!P.style&&y.length;)u=!0,P.modElem=a(y.shift()),P.style=P.modElem.style;for(v=e.length,d=0;v>d;d++)if(m=e[d],g=P.style[m],i(m,"-")&&(m=c(m)),P.style[m]!==n){if(o||r(s,"undefined"))return l(),"pfx"==t?m:!0;try{P.style[m]=s}catch(h){}if(P.style[m]!=g)return l(),"pfx"==t?m:!0}return l(),!1}function m(e,t){return function(){return e.apply(t,arguments)}}function g(e,t,n){var s;for(var o in e)if(e[o]in t)return n===!1?e[o]:(s=t[e[o]],r(s,"function")?m(s,n||t):s);return!1}function y(e,t,n,s,o){var i=e.charAt(0).toUpperCase()+e.slice(1),a=(e+" "+T.join(i+" ")+i).split(" ");return r(t,"string")||r(t,"undefined")?v(a,t,s,o):(a=(e+" "+z.join(i+" ")+i).split(" "),g(a,t,n))}function h(e,t,r){return y(e,n,n,t,r)}var w=[],S={_version:"3.5.0",_config:{classPrefix:"dm-",enableClasses:!0,enableJSClass:!0,usePrefixes:!0},_q:[],on:function(e,t){var n=this;setTimeout(function(){t(n[e])},0)},addTest:function(e,t,n){w.push({name:e,fn:t,options:n})},addAsyncTest:function(e){w.push({name:null,fn:e})}},Modernizr=function(){};Modernizr.prototype=S,Modernizr=new Modernizr;var C=[],x=t.documentElement,b="svg"===x.nodeName.toLowerCase();Modernizr.addTest("svg",!!t.createElementNS&&!!t.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect);var _="Moz O ms Webkit",T=S._config.usePrefixes?_.split(" "):[];S._cssomPrefixes=T;var E={elem:a("modernizr")};Modernizr._q.push(function(){delete E.elem});var P={style:E.elem.style};Modernizr._q.unshift(function(){delete P.style});var z=S._config.usePrefixes?_.toLowerCase().split(" "):[];S._domPrefixes=z,S.testAllProps=y,S.testAllProps=h,Modernizr.addTest("flexbox",h("flexBasis","1px",!0)),Modernizr.addTest("flexboxlegacy",h("boxDirection","reverse",!0)),Modernizr.addTest("flexboxtweener",h("flexAlign","end",!0)),Modernizr.addTest("flexwrap",h("flexWrap","wrap",!0));var N="CSS"in e&&"supports"in e.CSS,j="supportsCSS"in e;Modernizr.addTest("supports",N||j);var A=S.testStyles=f;A("#modernizr { width: 50vw; }",function(t){var n=parseInt(e.innerWidth/2,10),r=parseInt(d(t,null,"width"),10);Modernizr.addTest("cssvwunit",r==n)}),Modernizr.addTest("passiveeventlisteners",function(){var t=!1;try{var n=Object.defineProperty({},"passive",{get:function(){t=!0}});e.addEventListener("test",null,n)}catch(r){}return t}),s(),o(C),delete S.addTest,delete S.addAsyncTest;for(var k=0;k<Modernizr._q.length;k++)Modernizr._q[k]();e.Modernizr=Modernizr}(window,document);</script>
+
+<script>
+    var isWLR = true;
+</script>
+<!-- Custom Widgets js functions map -->
+<script>
+    window.customWidgetsFunctions = {};
+    window.customWidgetsStrings = {};
+</script>
+<script type="text/javascript">
+
+    var version = "3.8.6";
+    var build = "2019-03-05T15_40_17";
+
+    function buildEditorParent() {
+        window.isMultiScreen = true;
+        window.editorParent = {};
+        window.previewParent = {};
+        window.assetsCacheQueryParam = "?version=2019-03-05T15_40_17";
+        try {
+            var _p = window.parent;
+            if (_p && _p.document && _p.$ && _p.$.dmfw) {
+                window.editorParent = _p;
+            }
+            else if (_p.isSitePreview) {
+                window.previewParent = _p;
+            }
+        } catch (e) {
+
+        }
+    }
+
+    buildEditorParent();
+
+
+</script>
+<!-- Load jQuery -->
+<script type="text/javascript" src="../ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<!-- End Load jQuery --><script>
+    window.cookiesNotificationMarkupPreview = 'null';
+</script>
+<!-- HEAD RT JS Include -->
+<script>
+    window.INSITE = window.INSITE || {};
+    window.INSITE.device = "desktop";
+    window.rtCommonProps = {};
+    rtCommonProps["rt.ajax.ajaxScriptsFix"] =true;
+    rtCommonProps["rt.pushnotifs.sslframe.encoded"] = 'aHR0cHM6Ly97c3ViZG9tYWlufS5wdXNoLW5vdGlmcy5jb20=';
+    rtCommonProps["facebook.accessToken"] = '126515034112906|8vv7JhnEegS8qz43fIOZjxGZReA';
+    rtCommonProps["performance.tabletPreview.removeScroll"] = 'false';
+    rtCommonProps["feature.flag.contactUsNewForm"] = 'true';
+    rtCommonProps["inlineEditGrid.snap"] =true;
+    rtCommonProps["popup.insite.cookie.ttl"] = '0.0';
+    rtCommonProps["rt.pushnotifs.force.button"] =true;
+    rtCommonProps["google.places.key"] = 'AIzaSyBAwUOqPUB1CU31yDztoZYaUE7sPv4ktEI';
+    rtCommonProps["common.mapbox.token"] = 'pk.eyJ1IjoiZGFubnliMTIzIiwiYSI6ImNqMGljZ256dzAwMDAycXBkdWxwbDgzeXYifQ.Ck5P-0NKPVKAZ6SH98gxxw';
+    rtCommonProps["common.mapbox.js.override"] =false;
+    rtCommonProps["common.opencage.token"] = '319e14f32bcce967ba55cd263478796d';
+    rtCommonProps["common.here.appId"] = 'iYvDjIQ2quyEu0rg0hLo';
+    rtCommonProps["common.here.appCode"] = '1hcIxLJcbybmtBYTD9Z1UA';
+    rtCommonProps["isCoverage.test"] =false;
+    rtCommonProps["ecommerce.ecwid.script"] = 'https://app.multiscreenstore.com/script.js';
+    rtCommonProps["feature.flag.mappy.kml"] =false;
+    
+    rtCommonProps["common.mapsProvider"] = 'mapbox';
+    rtCommonProps['common.mapsProvider.version'] = '0.52.0';
+    rtCommonProps["common.geocodeProvider"] = 'here';
+    rtCommonProps['common.map.defaults.radiusSize'] = '1500';
+    rtCommonProps['common.map.defaults.radiusBg'] = 'rgba(255, 255, 255, 0.4)';
+    rtCommonProps['common.map.defaults.strokeColor'] = 'rgba(255, 255, 255, 1)';
+    rtCommonProps['common.map.defaults.strokeSize'] = '2';
+    rtCommonProps['server.for.resources'] = '';
+</script>
+<script src="_dm/s/rt/dist/scripts/d-js-runtime-one-package.min.js?version=2019-03-05T15_40_17" ></script>
+<!-- End of HEAD RT JS Include -->
+<script src="_dm/s/rt/dist/scripts/d-js-one-runtime-layouts-package.min.js?version=2019-03-05T15_40_17" ></script>
+<script src="_dm/s/rt/dist/scripts/d-js-one-runtime-layouts-desktop.min.js?version=2019-03-05T15_40_17" ></script>
+<script>jQuery.DM.updateWidthAndHeight();
+$(window).resize(function () {
+    jQuery.DM.updateWidth();
+    
+});
+$(window).bind("orientationchange", function (e) {
+    jQuery.DM.updateWidth();
+    jQuery.layoutManager.initLayout();
+    
+});
+$(document).resize(function () {
+    jQuery.DM.updateWidth();
+    
+});
+</script>
+
+
+
+
+<!-- End render the required css and JS in the head section -->
+
+
+
+
+
+
+
+
+  <title>
+    Felipe Baterias | Baterias para Carros e Motos | Entrega Grátis
+  </title>
+  <meta name="keywords" content="Loja de Baterias, Baterias para carro, baterias para moto, baterias 60ah, baterias automotivas, loja de baterias em recife, baterias para caminhão, entrega de baterias, baterias para honda civic, baterias para gol."/>
+  <meta name="description" content="Loja de Baterias automotivas, Baterias para Carros, motos, caminhões, ônibus, estacionárias, e dentre outras. Oferecemos o serviço de entrega e instalação grátis. Na Felipe Baterias você encontra as melhores marcas, baterias Heliar, América, Durex, Acdelco, Freedom, e dentre outras."/>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->  <script async="" src="../www.googletagmanager.com/gtag/js?id=UA-125146500-1">
+
+
+  
+  
+  </script>
+  <script>
+
+
+
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-125146500-1');
+
+  
+  
+  </script>
+
+  <meta name="twitter:card" content="summary"/>
+  <meta name="twitter:title" content="Felipe Baterias | Baterias para Carros e Motos | Entrega Grátis"/>
+  <meta name="twitter:description" content="Loja de Baterias automotivas, Baterias para Carros, motos, caminhões, ônibus, estacionárias, e dentre outras. Oferecemos o serviço de entrega e instalação grátis. Na Felipe Baterias você encontra as melhores marcas, baterias Heliar, América, Durex, Acdelco, Freedom, e dentre outras."/>
+  <meta property="og:description" content="Loja de Baterias automotivas, Baterias para Carros, motos, caminhões, ônibus, estacionárias, e dentre outras. Oferecemos o serviço de entrega e instalação grátis. Na Felipe Baterias você encontra as melhores marcas, baterias Heliar, América, Durex, Acdelco, Freedom, e dentre outras."/>
+  <meta property="og:title" content="Felipe Baterias | Baterias para Carros e Motos | Entrega Grátis"/>
+
+
+
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<body id="dmRoot"  class="supportsFontIcons supportsFontIcons dmRoot dmDesktopBody fix-mobile-scrolling dmResellerSite dmLargeBody " style="padding:0;margin:0;"
+            >
+    
+
+
+        <div id="disabledImageZone" style="display:none;z-index:-1">
+            <style type="text/css">
+                #imageZone {
+                    position: absolute;
+                    margin: auto;
+                }
+
+                .coloumns {
+                    border-radius: 3px;
+                    background-color: rgb(249, 152, 13); /*border:1px solid #999;*/
+                    height: 18px;
+                    width: 6px;
+                    -webkit-animation-name: loader;
+                    -webkit-animation-duration: 1s;
+                    -webkit-animation-iteration-count: infinite;
+                    -webkit-animation-direction: linear;
+                    -moz-animation-name: loader;
+                    -moz-animation-duration: 1s;
+                    -moz-animation-iteration-count: infinite;
+                    -moz-animation-direction: linear;
+                    opacity: .25;
+                    -webkit-transform: scale(0.7);
+                    -webkit-transform-origin: 50% 180%;
+                    -moz-transform: scale(0.7);
+                    -moz-transform-origin: 50% 180%;
+                    position: absolute;
+                }
+
+                #coloumn1 {
+                    -webkit-transform: rotate(0deg);
+                    -webkit-animation-delay: -.914s;
+                    -moz-transform: rotate(0deg);
+                    -moz-animation-delay: -.914s;
+                }
+
+                #coloumn2 {
+                    -webkit-transform: rotate(30deg);
+                    -webkit-animation-delay: -.831s;
+                    -moz-transform: rotate(30deg);
+                    -moz-animation-delay: -.831s;
+                }
+
+                #coloumn3 {
+                    -webkit-transform: rotate(60deg);
+                    -webkit-animation-delay: -.747s;
+                    -moz-transform: rotate(60deg);
+                    -moz-animation-delay: -.747s;
+                }
+
+                #coloumn4 {
+                    -webkit-transform: rotate(90deg);
+                    -webkit-animation-delay: -.664s;
+                    -moz-transform: rotate(90deg);
+                    -moz-animation-delay: -.664s;
+                }
+
+                #coloumn5 {
+                    -webkit-transform: rotate(120deg);
+                    -webkit-animation-delay: -.581s;
+                    -moz-transform: rotate(120deg);
+                    -moz-animation-delay: -.581s;
+                }
+
+                #coloumn6 {
+                    -webkit-transform: rotate(150deg);
+                    -webkit-animation-delay: -.498s;
+                    -moz-transform: rotate(150deg);
+                    -moz-animation-delay: -.498s;
+                }
+
+                #coloumn7 {
+                    -webkit-transform: rotate(180deg);
+                    -webkit-animation-delay: -.415s;
+                    -moz-transform: rotate(180deg);
+                    -moz-animation-delay: -.415s;
+                }
+
+                #coloumn8 {
+                    -webkit-transform: rotate(210deg);
+                    -webkit-animation-delay: -.332s;
+                    -moz-transform: rotate(210deg);
+                    -moz-animation-delay: -.332s;
+                }
+
+                #coloumn9 {
+                    -webkit-transform: rotate(240deg);
+                    -webkit-animation-delay: -.249s;
+                    -moz-transform: rotate(240deg);
+                    -moz-animation-delay: -.249s;
+                }
+
+                #coloumn10 {
+                    -webkit-transform: rotate(270deg);
+                    -webkit-animation-delay: -.166s;
+                    -moz-transform: rotate(270deg);
+                    -moz-animation-delay: -.166s;
+                }
+
+                #coloumn11 {
+                    -webkit-transform: rotate(300deg);
+                    -webkit-animation-delay: -.083s;
+                    -moz-transform: rotate(300deg);
+                    -moz-animation-delay: -.083s;
+                }
+
+                #coloumn12 {
+                    -webkit-transform: rotate(330deg);
+                    -moz-transform: rotate(330deg);
+                }
+
+                @-webkit-keyframes loader {
+                    0% {
+                        opacity: 1;
+                    }
+                    100% {
+                        opacity: .25;
+                    }
+                }
+
+                @-moz-keyframes loader {
+                    0% {
+                        opacity: 1;
+                    }
+                    100% {
+                        opacity: .25;
+                    }
+                }
+            </style>
+            <div id='imageZone'>
+                <div id='coloumn1' class='coloumns'></div>
+                <div id='coloumn2' class='coloumns'></div>
+                <div id='coloumn3' class='coloumns'></div>
+                <div id='coloumn4' class='coloumns'></div>
+                <div id='coloumn5' class='coloumns'></div>
+                <div id='coloumn6' class='coloumns'></div>
+                <div id='coloumn7' class='coloumns'></div>
+                <div id='coloumn8' class='coloumns'></div>
+                <div id='coloumn9' class='coloumns'></div>
+                <div id='coloumn10' class='coloumns'></div>
+                <div id='coloumn11' class='coloumns'></div>
+                <div id='coloumn12' class='coloumns'></div>
+            </div>
+        </div>
+
+        <!-- ========= Site Content ========= -->
+        <div id="dm" class='dmwr'>
+            
+            <div class="dm_wrapper standard-var5 widgetStyle-3 standard">
+                 <div dmwrapped="true" id="1901957768" class="dm-home-page" themewaschanged="true"> <div dmtemplateid="StandardLayoutMultiD" class="standardHeaderLayout dm-bfs dm-layout-home hasAnimations hasStickyHeader layout-drawer_fixed-header dmPageBody d-page-1716942098 dmFreeHeader" id="dm-outer-wrapper" data-page-class="1716942098" data-buttonstyle="BORDER_SHORT" data-soch="true" data-background-size="cover" data-background-attachment="fixed" data-background-repeat="no-repeat" data-background-position="50% 0%" data-background-hide-inner="true" data-background-fullbleed="false" data-background-parallax-selector=".dmSectionParallex" data-background-parallax-speed="0.2"> <div id="dmStyle_outerContainer" class="dmOuter"> <div id="dmStyle_innerContainer" class="dmInner"> <div class="dmLayoutWrapper standard-var dmStandardDesktop"> <ul class="dmn dmLayoutNav hiddenNavPlaceHolder navPlaceHolder dmDisplay_None"></ul> 
+ <div> <div id="iscrollBody"> <div id="site_content"> <div class="dmHeaderContainer fHeader d-header-wrapper"> <div id="hcontainer" class="dmHeader p_hfcontainer u_hcontainer" freeheader="true" headerlayout="793"> <div dm:templateorder="85" class="dmHeaderResp dmHeaderStack noSwitch" id="1709005236"> <div class="u_1549369926 dmRespRow dmDefaultListContentRow fullBleedChanged fullBleedMode" style="text-align:center" id="1549369926"> <div class="dmRespColsWrapper" id="1945806580"> <div class="u_1143519486 dmRespCol small-12 large-5 medium-5" id="1143519486"> <div class="u_1634782015 imageWidget align-center" editablewidget="true" data-element-type="image" data-widget-type="image" id="1634782015"> <a href="index.html" id="1164693695"><img src="../irp-cdn.multiscreensite.com/4169e4fb/dms3rep/multi/tablet/Logo.png" id="1275634110" class="" data-dm-image-path="https://irp-cdn.multiscreensite.com/4169e4fb/dms3rep/multi/Logo.png" alt="felipe baterias" data-hover-effect="zoomout" title="Loja de baterias automotivas" onerror="handleImageLoadError(this)"/></a> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="stickyHeaderSpacer" id="stickyHeaderSpacer" data-new="true"></div> 
+ <div class="dmRespRow dmRespRowStable dmRespRowNoPadding dmPageTitleRow "> <div class="dmRespColsWrapper"> <div class="large-12 dmRespCol"> <div id="innerBar" class="innerBar lineInnerBar dmDisplay_None"> <div class="titleLine display_None"><hr/></div> 
+<!-- Page title is hidden in css for new responsive sites. It is left here only so we don't break old sites. Don't copy it to new layouts --> <div id="pageTitleText"></div> 
+ <div class="titleLine display_None"><hr/></div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div dmwrapped="true" id="1901957768" class="dmBody u_dmStyle_template_home dm-home-page" themewaschanged="true"> <div id="allWrapper" class="allWrapper"><!-- navigation placeholders --> <div id="dm_content" class="dmContent"> <div dm:templateorder="170" class="dmHomeRespTmpl mainBorder dmRespRowsWrapper dmFullRowRespTmpl" id="1716942098"> <div class="u_1042139334 dmRespRow dmSectionNoParallax fullBleedChanged fullBleedMode hide-for-small hide-for-medium" style="text-align: center;" id="1042139334" data-gallery-bg="eyJzbGlkZXMiOlsiaHR0cHM6Ly9pcnAtY2RuLm11bHRpc2NyZWVuc2l0ZS5jb20vNDE2OWU0ZmIvZG1zM3JlcC9tdWx0aS9oaC5qcGciXSwidHJhbnNpdGlvbiI6InNsaWRlTGVmdCIsInNwZWVkIjoiNyJ9"> <div class="dmRespColsWrapper" id="1417687552"> <div class="dmRespCol small-12 medium-12 large-12 u_1870837777" id="1870837777"></div> 
+</div> 
+</div> 
+ <div class="u_1528101384 dmRespRow hide-for-small" style="text-align: center;" id="1528101384"> <div class="dmRespColsWrapper" id="1757649957"> <div class="dmRespCol small-12 medium-12 large-12" id="1565073749"> <div class="u_1328441589 dmNewParagraph" data-dmtmpl="true" id="1328441589" style="text-align: center;" data-uialign="center" localization_key="googleTranslate.pRQ8r0V.17"><b><font style="color: rgb(0, 74, 10);"><span style="font-weight: 400; font-family: 'Arial Black';" class="lh-1 font-size-30">SOLICITE AGORA A SUA BATERIA!</span></font></b></div></div> 
+</div> 
+</div> 
+ <div class="u_1814689577 dmRespRow hide-for-small" style="text-align: center;" id="1814689577"> <div class="dmRespColsWrapper" id="1193418404"> <div class="dmRespCol small-12 medium-4 large-4" id="1355408506"> <a class="default dmDefaultGradient align-center u_1400150274 dmCall voipReplacement dmWidget dmNoMark dmWwr" href="tel:(81) 3378-0557" contenteditable="false" onclick=";return dm_gaq_push_event('ClickToCall', 'Call',null,'4169e4fb', this);" dm_dont_rewrite_url="true" id="1400150274" dmle_extension="clicktocall" data-element-type="clicktocall" wr="true" data-buttonstyle="CONTRAST_ICON" data-display-type="block" localization_key_description="googleTranslate.g8fZa6q.1" icon="true" surround="true" description="(81) 3378-0557" adwords="" icon-name="icon-phone" phone="(81) 3378-0557" text="" image=""> <span class="iconBg"> <span class="icon hasFontIcon icon-phone"></span> 
+</span> 
+ <span class="text" dmle_select_parent="1">(81) 3378-0557</span> 
+</a> 
+</div> 
+ <div class="dmRespCol small-12 medium-4 large-4" id="1368984860"> <a class="u_1512330170 default dmDefaultGradient align-center dmCall voipReplacement dmWidget dmNoMark dmWwr" href="tel:81983375312" contenteditable="false" onclick=";return dm_gaq_push_event('ClickToCall', 'Call',null,'4169e4fb', this);" dm_dont_rewrite_url="true" id="1512330170" dmle_extension="clicktocall" data-element-type="clicktocall" wr="true" data-buttonstyle="CONTRAST_ICON" data-display-type="block" localization_key_description="googleTranslate.JKGaAQY.3" icon="true" surround="true" description="(81) 98337-5312" adwords="" icon-name="icon-tablet" phone="81983375312" text="" image=""> <span class="iconBg"> <span class="icon hasFontIcon icon-tablet"></span> 
+</span> 
+ <span class="text" dmle_select_parent="1">(81) 98337-5312</span> 
+</a> 
+</div> 
+ <div class="dmRespCol small-12 medium-4 large-4" id="1435672596"> <a data-display-type="block" class="u_1177553832 align-center dmButtonLink dmWidget dmWwr default dmOnlyButton dmDefaultGradient" file="false" href="https://wa.me/5581996983504?text=Gostaria%20de%20solicitar%20uma%20bateria.." data-element-type="dButtonLinkId" id="1177553832" dm_dont_rewrite_url="false" data-buttonstyle="CONTRAST_ICON" icon-name="icon-comments-alt" target="_blank"> <span class="iconBg" id="1848453868"> <span class="icon hasFontIconstar hasFontIcon icon-comments-alt" id="1648833295"></span> 
+</span> 
+ <span class="text" id="1512641770" localization_key="googleTranslate.86ZN4KI.18">(81) 99698-3504</span> 
+</a> 
+</div> 
+</div> 
+</div> 
+ <div class="u_1706420083 dmRespRow hide-for-small" style="text-align: center;" id="1706420083"> <div class="dmRespColsWrapper" id="1843104440"> <div class="dmRespCol small-12 medium-12 large-12" id="1432469477"> <div class="u_1329372279 dmDividerWrapper clearfix hasFullWidth" data-element-type="dDividerId" data-layout="divider-style-1" data-widget-version="2" id="1329372279" layout="divider-style-3"><hr class="dmDivider" style="border-width:2px; border-top-style:solid; color:grey;" id="1155236545"/></div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="dmFooterContainer"> <div id="fcontainer" class="u_fcontainer f_hcontainer dmFooter p_hfcontainer"> <div dm:templateorder="250" class="dmFooterResp generalFooter" id="1943048428"> <div class="u_1577671878 dmRespRow hide-for-small" style="text-align: center;" id="1577671878"> <div class="dmRespColsWrapper" id="1932839533"> <div class="dmRespCol small-12 medium-12 large-12" id="1504172668"> <h1 class="dmNewParagraph" data-element-type="paragraph" id="1479523716" style="text-align: center; transition: opacity 1s ease-in-out 0s;" data-uialign="center" localization_key="googleTranslate.Up1YWL9.20"><font style="color: rgb(255, 255, 255);">SOBRE N&Oacute;S</font></h1> <div class="u_1163913810 dmNewParagraph" data-dmtmpl="true" id="1163913810" style="transition: none 0s ease 0s; display: block;" data-uialign="center" localization_key="googleTranslate.M1vmYll.21"><div style="text-align: left;"><span style="color: rgb(255, 255, 255); font-family: Arial; font-size: 16px; text-align: justify;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Somos uma empresa do seguimento automotivo, &agrave; mais de dois anos oferecendo aos nossos clientes o melhor servi&ccedil;o em baterias. Visando maior comodidade, temos o servi&ccedil;o de entrega e instala&ccedil;&atilde;o gr&aacute;tis. Atualmente trabalhamos exclusivamente com os produtos Johnson Controls, que s&atilde;o as baterias: Heliar, Am&eacute;rica, Durex, ACDelco, Freedom, dentre outras. Com uma equipe de profissionais qualificados, seu ve&iacute;culo estar&aacute; em boas m&atilde;os. Atendemos toda linha de ve&iacute;culos de passeio, motos, toda linha pesada como caminh&otilde;es e &ocirc;nibus, geradores e estacion&aacute;rias. Na Felipe Baterias voc&ecirc; encontra sempre o melhor pre&ccedil;o com o mellhor servi&ccedil;o.</span><br/></div><span class="m-font-size-36 lh-1 font-size-72"><div style="text-align: center;">&nbsp;</div></span></div></div> 
+</div> 
+</div> 
+ <div class="u_1256209121 dmRespRow hide-for-small" id="1256209121"> <div class="dmRespColsWrapper" id="1074536841"> <div class="dmRespCol large-12 medium-12 small-12" id="1406839159"> <h1 class="dmNewParagraph u_1532216727" data-element-type="paragraph" id="1532216727" style="text-align: center; transition: none 0s ease 0s; display: block;" data-uialign="center" localization_key="googleTranslate.xVP9Frf.22"><font style="color: rgb(0, 74, 10);">BATERIAS</font></h1></div> 
+</div> 
+</div> 
+ <div class="u_1061318573 dmRespRow hide-for-small" id="1061318573"> <div class="dmRespColsWrapper" id="1718869611"> <div class="dmRespCol large-6 medium-6 small-12" id="1126216960"> <div class="imageWidget align-center u_1280483553" editablewidget="true" data-element-type="image" data-widget-type="image" id="1280483553"><img src="../irp-cdn.multiscreensite.com/4169e4fb/dms3rep/multi/mobile/Lançamento-Bateria-Heliar-Super-Free.png" id="1602392041" class="" data-dm-image-path="https://irp-cdn.multiscreensite.com/4169e4fb/dms3rep/multi/Lan%C3%A7amento-Bateria-Heliar-Super-Free.png" alt="bateria heliar super free" onerror="handleImageLoadError(this)"/></div> 
+</div> 
+ <div class="dmRespCol small-12 large-6 medium-6" id="1282206892"> <div class="u_1454821010 dmNewParagraph" data-dmtmpl="true" data-element-type="paragraph" id="1454821010" style="transition: none 0s ease 0s; display: block;" data-uialign="right" localization_key="googleTranslate.ECDMGp8.23"><div style="text-align: center;"><span style="font-weight: 400; font-family: 'Arial Black';" class="font-size-24 lh-1"><font style="color: rgb(0, 74, 10);">LINHA SUPER FREE</font></span></div></div> <div class="u_1984585819 dmNewParagraph" data-dmtmpl="true" data-element-type="paragraph" id="1984585819" style="transition: none 0s ease 0s; display: block;" data-uialign="left" localization_key="googleTranslate.lcR9d5V.24"><div style="text-align: justify;"><span style="color: rgb(0, 0, 0);">&nbsp; &nbsp; &nbsp; &nbsp;Heliar Super Free tem a tecnologia PowerFrame, que garante maior resist&ecirc;ncia &agrave; corros&atilde;o e mais energia para a sua bateria. Por isso, &eacute; a mais indicada pelos especialistas.&nbsp;</span><span style="color: rgb(0, 0, 0);">Na compra de uma bateria Heliar Super Free, voc&ecirc; conta com a Prote&ccedil;&atilde;o 24 horas em caso de pane el&eacute;trica, com direito a guincho, mesmo que o problema n&atilde;o seja na bateria. Esse benef&iacute;cio exclusivo j&aacute; vale o investimento.&nbsp;</span></div></div> <div class="dmNewParagraph u_1809718748" data-dmtmpl="true" data-element-type="paragraph" id="1809718748" style="transition: none 0s ease 0s; display: block;" data-uialign="right" localization_key="googleTranslate.7DW39LJ.25"><div style="text-align: center;"><font color="#004a0a"><span style="font-size: 24px; font-weight: 300;"><i>UMA BATERIA COM TODOS ESSES DIFERENCIAIS S&Oacute; PODERIA SER SUPER.</i></span></font></div></div></div> 
+</div> 
+</div> 
+ <div class="u_1839332712 dmRespRow hide-for-small" style="text-align: center;" id="1839332712"> <div class="dmRespColsWrapper" id="1443055538"> <div class="dmRespCol small-12 medium-6 large-6" id="1876198444"> <div class="u_1131558612 dmNewParagraph" data-dmtmpl="true" data-element-type="paragraph" id="1131558612" style="transition: none 0s ease 0s; display: block;" data-uialign="left" localization_key="googleTranslate.76Ha0Lm.26"><div style="text-align: center;"><span style="font-weight: 400; font-family: 'Arial Black';" class="font-size-24 lh-1"><font style="color: rgb(0, 74, 10);">LINHA ORIGINAL</font></span></div></div> <div class="u_1168407325 dmNewParagraph" data-dmtmpl="true" data-element-type="paragraph" id="1168407325" style="transition: none 0s ease 0s; display: block;" data-uialign="left" localization_key="googleTranslate.4RIcXQD.27"><div style="text-align: justify;"><span style="color: rgb(0, 0, 0);">&nbsp; &nbsp; &nbsp; &nbsp;A Heliar Original possui a tecnologia PowerFrame, que garante mais resist&ecirc;ncia e autonomia para a sua bateria e garantia de 18 meses. Por isso, &eacute; a bateria testada e aprovada mundialmente pelas montadoras.</span></div></div> <div class="u_1777139766 dmNewParagraph" data-dmtmpl="true" data-element-type="paragraph" id="1777139766" style="transition: none 0s ease 0s; display: block;" data-uialign="left" localization_key="googleTranslate.StcO6aC.28"><div style="text-align: center;"><font color="#004a0a"><span style="font-size: 24px; font-weight: 300;"><i>SEU CARRO MERECE A ORIGINAL.</i></span></font></div></div></div> 
+ <div class="dmRespCol small-12 medium-6 large-6" id="1897960403"> <div class="u_1150001607 imageWidget align-center" editablewidget="true" data-element-type="image" data-widget-type="image" id="1150001607"><img src="../irp-cdn.multiscreensite.com/4169e4fb/dms3rep/multi/mobile/HERO-IMAGE-ORIGINAL_940x1040.png" id="1805682586" class="" data-dm-image-path="https://irp-cdn.multiscreensite.com/4169e4fb/dms3rep/multi/HERO-IMAGE-ORIGINAL_940x1040.png" alt="bateria heliar original" onerror="handleImageLoadError(this)"/></div> 
+</div> 
+</div> 
+</div> 
+ <div class="u_1247495648 dmRespRow hide-for-small" style="text-align: center;" id="1247495648"> <div class="dmRespColsWrapper" id="1141626638"> <div class="dmRespCol small-12 medium-6 large-6" id="1112423185"> <div class="imageWidget align-center u_1677642024" editablewidget="true" data-element-type="image" data-widget-type="image" id="1677642024"><img src="../irp-cdn.multiscreensite.com/4169e4fb/dms3rep/multi/mobile/venda-de-bateria-heliar-para-moto.png" id="1846920229" class="" data-dm-image-path="https://irp-cdn.multiscreensite.com/4169e4fb/dms3rep/multi/venda-de-bateria-heliar-para-moto.png" alt="bateria heliar moto" onerror="handleImageLoadError(this)"/></div> 
+</div> 
+ <div class="dmRespCol small-12 medium-6 large-6" id="1629618705"> <div class="u_1129937022 dmNewParagraph" data-dmtmpl="true" data-element-type="paragraph" id="1129937022" style="transition: opacity 1s ease-in-out 0s;" data-uialign="right" localization_key="googleTranslate.Hh0zFor.29"><div style="text-align: center;"><span style="font-weight: 400; font-family: 'Arial Black';" class="font-size-24 lh-1"><font style="color: rgb(0, 74, 10);">LINHA MOTO</font></span></div></div> <div class="u_1834102305 dmNewParagraph" data-dmtmpl="true" data-element-type="paragraph" id="1834102305" style="transition: none 0s ease 0s; display: block;" data-uialign="right" localization_key="googleTranslate.vCPKa6w.30"><div style="text-align: justify;"><span style="color: rgb(0, 0, 0);">&nbsp; &nbsp; &nbsp; A Heliar PowerSports tem a inovadora tecnologia AGM. A bateria &eacute; totalmente selada e pronta para uso, porque n&atilde;o requer manuseio de &aacute;cido. Instalou, ligou. Ideal para sua moto todos os dias.</span></div></div> <div class="dmNewParagraph u_1992557279" data-dmtmpl="true" data-element-type="paragraph" id="1992557279" style="transition: none 0s ease 0s; display: block;" data-uialign="right" localization_key="googleTranslate.aNCG0Jj.31"><div style="text-align: center;"><font color="#004a0a"><span style="font-size: 24px; font-weight: 300;"><i>SUA MOTO COM ALTO DESEMPENHO.</i></span></font></div></div></div> 
+</div> 
+</div> 
+ <div class="u_1545659815 dmRespRow hide-for-small" style="text-align: center;" id="1545659815"> <div class="dmRespColsWrapper" id="1077022997"> <div class="dmRespCol small-12 medium-6 large-6" id="1207561215"> <div class="u_1483668680 dmNewParagraph" data-dmtmpl="true" data-element-type="paragraph" id="1483668680" style="text-align: center; transition: opacity 1s ease-in-out 0s;" data-uialign="left" localization_key="googleTranslate.q2RRWZK.32"><div><span style="font-weight: 400; font-family: 'Arial Black';" class="font-size-24 lh-1"><font style="color: rgb(0, 74, 10);">LINHA FROTA</font></span></div></div> <div class="u_1598539939 dmNewParagraph" data-dmtmpl="true" data-element-type="paragraph" id="1598539939" style="transition: none 0s ease 0s; display: block;" data-uialign="left" localization_key="googleTranslate.42wUIPk.33"><div style="text-align: justify;"><span style="color: rgb(0, 0, 0);">&nbsp; &nbsp; &nbsp; A linha Heliar Frota &eacute; ideal para caminh&otilde;es e m&aacute;quina agr&iacute;colas. Al&eacute;m de ser preparada para ve&iacute;culos de alto desempenho, oferece o melhor custo-benef&iacute;cio por quil&ocirc;metro rodado. Heliar Frota tem maior vida &uacute;til porque possui um sistema de absor&ccedil;&atilde;o de impacto, ideal para suportar as aplica&ccedil;&otilde;es mais severas.</span></div></div> <div class="dmNewParagraph u_1623639136" data-dmtmpl="true" data-element-type="paragraph" id="1623639136" style="transition: none 0s ease 0s; display: block;" data-uialign="left" localization_key="googleTranslate.B9IeHR3.34"><div style="text-align: center;"><font color="#004a0a"><span style="font-size: 24px; font-weight: 300;"><i>QUANDO O NEG&Oacute;CIO &Eacute; CARGA PESADA, ESTA &Eacute; A SUA BATERIA</i></span></font></div></div></div> 
+ <div class="dmRespCol small-12 medium-6 large-6" id="1813816718"> <div class="imageWidget align-center u_1834267746" editablewidget="true" data-element-type="image" data-widget-type="image" id="1834267746"><img src="../irp-cdn.multiscreensite.com/4169e4fb/dms3rep/multi/mobile/SRT180TE.png" id="1283258724" class="" data-dm-image-path="https://irp-cdn.multiscreensite.com/4169e4fb/dms3rep/multi/SRT180TE.png" alt="bateria heliar frota" onerror="handleImageLoadError(this)"/></div> 
+</div> 
+</div> 
+</div> 
+ <div class="u_1821286523 dmRespRow hide-for-small" style="text-align: center;" id="1821286523"> <div class="dmRespColsWrapper" id="1770355470"> <div class="dmRespCol small-12 medium-12 large-12" id="1741990649"> <div data-element-type="html" class="dmCustomHtml" id="1217866034"><!--Start of Tawk.to Script--> <script type="text/javascript">
+
+
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/5c2e6e3182491369baa062de/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+                
+            </script> 
+<!--End of Tawk.to Script--></div> 
+ <div class="dmform default u_1701825718" preserve_css="true" data-element-type="dContactUsRespId" id="1701825718"> <h3 class="dmform-title dmwidget-title" id="1837495929" localization_key="googleTranslate.SS6otFu.35">CONTATE-NOS</h3> 
+ <div class="dmform-wrapper" preserve_css="true" id="1115793256" captcha-lang="pt"> <form method="post" class="dmRespDesignRow" locale="PORTUGUESE" id="1605491125"> <div class="dmforminput required  small-12 medium-4 large-4  dmRespDesignCol" id="1784990305" localization_key_label="googleTranslate.7lnat85.36"> <label for="dmform-0" id="1189354849">Nome:</label> 
+<input type="text" class="" name="dmform-0" id="1326920461"/><input type="hidden" name="label-dmform-0" value="Nome:" id="1983862528" class=""/></div> 
+ <div class="dmforminput required  small-12 medium-4 large-4  dmRespDesignCol" id="1578447212" localization_key_label="googleTranslate.ssXbtlC.8"> <label for="dmform-1" id="1524438486">E-mail:</label> 
+<input type="email" class="" name="dmform-1" id="1546939105"/><input type="hidden" name="label-dmform-1" value="Email" id="1418048065"/></div> 
+ <div class="dmforminput required  small-12 medium-4 large-4  dmRespDesignCol" id="1697469781" localization_key_label="googleTranslate.LwvZPrk.9"> <label for="dmform-2" id="1641781921">Telefone:</label> 
+<input type="tel" class="" name="dmform-2" id="1499079053"/><input type="hidden" name="label-dmform-2" value="Phone" id="1103195894"/></div> 
+ <div class="dmforminput large-12 medium-12 dmRespDesignCol" id="1916302709" localization_key_label="googleTranslate.Mb0IZUO.10"> <label for="dmform-3" id="1440349782">Mensagem:</label> 
+ <textarea name="dmform-3" id="1303406044"></textarea> 
+<input type="hidden" name="label-dmform-3" value="Message" id="1074632186"/></div> 
+ <div class="dmformsubmit dmWidget R" preserve_css="true" id="1621253493"><input class="" name="submit" type="submit" value="Enviar Mensagem" id="1714429583" localization_key_value="googleTranslate.dZOdgoz.37"/></div> 
+<input name="dmformsendto" type="hidden" value="O0wrseIfFLs+kUiWJGGlaCZmnDf+kk8tR/Ee/WS4CcPuGM1wP5EQVv2rMwRyZxskSqk/1LccSVRkqKI63bheYQ==" preserve_css="true" id="1964964961" class="" data-dec="true"/><input class="dmActionInput" type="hidden" name="action" value="/_dm/s/rt/widgets/dmform.submit.jsp" id="1345036337"/><input name="dmformsubject" type="hidden" value="Mensagem do Formulário" preserve_css="true" id="1051984691" class="" localization_key_value="googleTranslate.YYBXSP5.12"/></form> 
+</div> 
+ <div class="dmform-success" style="display:none" preserve_css="true" id="1118130648" localization_key="googleTranslate.lRG3jtj.38">Obrigado por entrar em contato.<br id="1107351350"/>Retornaremos assim que poss&iacute;vel.</div> 
+ <div class="dmform-error" style="display:none" preserve_css="true" id="1630875444" localization_key="googleTranslate.pu2anEF.39">Desculpe, houve um erro ao enviar a mensagem.<br id="1635455858"/>Tente novamente mais tarde.</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="u_1686005289 dmRespRow" style="text-align: center;" id="1686005289"> <div class="dmRespColsWrapper" id="1837856251"></div> 
+Copyright &copy; 2019 Todos os direitos reservados a Felipe Baterias - by Alpha Comunica&ccedil;&otilde;es<br/> <a href="http://www.facebook.com/felipebaterias1" target="_blank">Facebook</a> 
+| <a href="http://www.facebook.com/felipebaterias1" target="_blank">Instagram</a> 
+</div> 
+</div> 
+ <div id="1236746004" dmle_extension="powered_by" data-element-type="powered_by" wr="false" icon="true" surround="false" data-dmtmpl="true"></div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+
+            </div>
+        </div>
+<!--  Add full CSS and Javascript before the close tag of the body if needed -->
+<script type="text/javascript">
+(function() {
+ 	var campaign = (/utm_campaign=([^&]*)/).exec(window.location.search);
+ 	
+ 	if (campaign && campaign != null && campaign.length > 1) {
+ 		campaign = campaign[1]; 		
+ 		document.cookie = "_dm_rt_campaign=" + campaign + ";expires=" + new Date().getTime() + 24*60*60*1000 + ";domain=" + window.location.hostname + ";path=/";
+ 	}
+}());
+</script>
+<script type="text/javascript">
+  var _dm_gaq = {};
+  var _gaq = _gaq || [];
+  var _dm_insite = [];
+
+  
+  _dm_gaq.siteAlias = '4169e4fb';
+  _dm_gaq.systemAggregatedGaqID = 'UA-7265702-9';
+  _dm_gaq.externalGaqID = 'UA-125146500-1';
+  
+  _gaq.push(['_gat._forceSSL']);
+  
+  if(_dm_gaq.systemAggregatedGaqID && (_dm_gaq.systemAggregatedGaqID != _dm_gaq.systemGaqID)){
+     // track aggregated account
+    _gaq.push(['b._setAccount', _dm_gaq.systemAggregatedGaqID]);
+    _gaq.push(['b._setAllowLinker', true]);
+    _gaq.push(['b._setVar', _dm_gaq.siteAlias]);
+    
+    _gaq.push (['b._gat._anonymizeIp']);
+    
+    _gaq.push(['b._setCustomVar', 1, 'product', 'DM_DIRECT',  2 ]);
+    _gaq.push(['b._setCustomVar', 2, 'plan', 'UOL_Professional',  2 ]);
+    _gaq.push(['b._setCustomVar', 3, 'dfooter', 'true',  2 ]);
+    _gaq.push(['b._setCustomVar', 4, 'sitetype', '1',  2 ]);
+    _gaq.push(['b._setCustomVar', 5, 'pwaEnabled', 'false',  2 ]);
+
+      _gaq.push(['b._trackPageview' ]);
+    pushInsiteImpressions('b._trackEvent');
+   }
+       
+   if(_dm_gaq.externalGaqID && _dm_gaq.externalGaqID!= '') {    	    	
+     _gaq.push(['c._setAccount', _dm_gaq.externalGaqID]);                      
+     _gaq.push(['c._setVar', _dm_gaq.siteAlias]);
+     _gaq.push(['c._setDomainName', 'felipebaterias.com.br']);
+     _gaq.push(['c._setAllowLinker', true]);
+     _gaq.push(['c._trackPageview' ]);
+     pushInsiteImpressions('c._trackEvent');
+   }
+
+   function pushInsiteImpressions(category) {
+   	$.each(_dm_insite, function(idx, rule) {
+   		_gaq.push([ category, 'insite_impression' , _dm_gaq.siteAlias, rule.ruleType + '__' + rule.ruleId, ]);
+   	});
+   }
+(function() {
+	var ga = document.createElement('script');
+	ga.type = 'text/javascript';
+	ga.async = true;
+  
+	ga.src = 'https://ssl.google-analytics.com/ga.js';
+	var s = document.getElementsByTagName('script')[0];
+	s.parentNode.insertBefore(ga, s);
+})();
+  	
+;(function(p,l,o,w,i,n,g){if(!p[i]){p.GlobalSnowplowNamespace=p.GlobalSnowplowNamespace||[];
+p.GlobalSnowplowNamespace.push(i);p[i]=function(){(p[i].q=p[i].q||[]).push(arguments)
+};p[i].q=p[i].q||[];n=l.createElement(o);g=l.getElementsByTagName(o)[0];n.async=1;
+n.src=w;g.parentNode.insertBefore(n,g)}}(window,document,"script","//d32hwlnfiv2gyn.cloudfront.net/sp-2.0.0-dm-0.1.min.js","snowplow"));
+window.dmsnowplow  = window.snowplow;
+
+dmsnowplow('newTracker', 'cf', 'd32hwlnfiv2gyn.cloudfront.net', { // Initialise a tracker
+  appId: '4169e4fb'
+});
+
+dmsnowplow('trackPageView')
+$.each(_dm_insite, function(idx, rule) {
+	//('trackStructEvent', 'category','action','label','property','value');
+			// Specifically in popup only the client knows if it is shown or not so we don't always want to track its impression here
+	        // the tracking is in popup.js
+			if (rule.actionName !== "popup") {
+                dmsnowplow('trackStructEvent', 'insite', 'impression', rule.ruleType, rule.ruleId);
+            }
+ 			$(document).ready(function(){
+ 				$.DM.events.trigger('event-ruleTriggered', {value: rule})}
+ 			);
+ 		});
+   </script>
+
+<div style="display:none;" id="P6iryBW0Wu"></div>
+
+<!-- photoswipe markup -->
+
+
+
+
+
+
+
+
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Fechar (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Compartilhar"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Alternar tela cheia "></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Aumentar/diminuir zoom"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Anterior (seta para esquerda)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Próximo (seta para a direita)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<!-- note these also must be called after ajax -->
+<script>
+    var dmForceShare = false;
+    if (dmForceShare || $("#shareSection").length > 0 || $(".dmShare").length > 0) {
+        dmLoadShare();
+    }
+
+    function dmLoadShare() {
+        /* google plus shares */
+        $.ajax({
+            url: "https://apis.google.com/js/plusone.js", dataType: "script", success: function () {
+            }
+        });
+        /* linked in shares */
+        $.ajax({
+            url: "https://platform.linkedin.com/in.js", dataType: "script", success: function () {
+            }
+        });
+        /* Twitter Shares */
+        $.ajax({
+            url: "https://platform.twitter.com/widgets.js", dataType: "script", success: function () {
+            }
+        });
+    }
+</script>
+<div id="fb-root"
+        data-locale="pt_PT"></div>
+
+<!-- Alias: 4169e4fb -->
+<div class="dmPopupMask" id="dmPopupMask"></div>
+<div id="dmPopup" class="dmPopup">
+	<div class="dmPopupCloseWrapper"> <div class="dmPopupClose dm-icon-x_close_popup oneIcon" onclick="dmHidePopup(event);"></div> </div> 
+ 	<div class="dmPopupTitle"> <span></span> Share by:</div> 
+	<div class="data"></div>
+</div><script>
+// Collects client data and updates cookies used by smart sites
+var expireDays = 365,visitLength = 30 * 60000;
+$.setCookie("dm_timezone_offset", (new Date()).getTimezoneOffset(), expireDays);
+function setSmartSiteCookies() {
+	setSmartSiteCookiesInternal("dm_this_page_view","dm_last_page_view","dm_total_visits","dm_last_visit");
+}
+$.DM.events.on("afterAjax", setSmartSiteCookies);
+setSmartSiteCookies();
+</script>
+<script type="text/javascript">
+    $.extend(Parameters,{
+        AjaxContainer : "div.dmBody",
+        WrappingContainer : "div.dmOuter",
+        HomeUrl : "https://www.felipebaterias.com.br:8443/",
+        AccountUUID: "ba9b78b4eb384601ba76dadb1ed43656",
+        SiteAlias : "4169e4fb",
+        SiteId : "1359397",
+        SiteType : eval(Base64.decode("J0RVREFPTkUn")),
+        ExternalUid: null,
+        IsSEOFriendlyLinks : true,
+        IsSiteMultilingual: false,
+        InitialPostAlias: '',
+        InitialPageAlias : "home",
+        InitialEncodedPageAlias : "aG9tZQ==",
+        IsFromScratch : "false",
+        CurrentPageUrl : "",
+        IsCurrentHomePage : true,
+        classicLink : "",
+         AllowAjax : true,
+        AfterAjaxCommand : null,
+        HomeLinkText:"Back To Home",
+        UseGalleryModule : false,
+        CurrentThemeName : "Layout Theme",
+        ThemeVersion : "690",
+        DefaultPageAlias : "",
+        RemoveDID : true,
+         LayoutVariationID : {desktop : 5},
+		LayoutID : {desktop : 6},
+		WidgetStyleID : null,
+		IsHeaderFixed: false,
+		IsHeaderSkinny: false,
+		IsBfs: true,
+		LayoutParams : {_manifestId : 10600,_device : "desktop"},
+    		StorePageAlias: "null",
+        StorePath: "",
+        StoreId: "16169144",
+        StoreVersion: 2,
+    		StoreBaseUrl: "",
+        StoreCleanUrl:true,
+    		StoreDisableScrolling: true,
+    		NotificationSubDomain: "felipebaterias",
+        HasCustomDomain: true,
+    		showCookieNotification: false,
+		cookiesNotificationMarkup: 'null',
+        translatedPageUrl: '',
+        isFastMigrationSite: false,
+        sidebarPosition: 'NA',
+        currentLanguage: "pt",
+        NavItems: "W3sidGl0bGUiOiJJTklDSU8iLCJhbGlhcyI6ImhvbWUiLCJwYXRoIjoiLyIsImluTmF2aWdhdGlvbiI6dHJ1ZSwic3ViTmF2IjpbXX0seyJ0aXRsZSI6IklOSUNJTyBNT0JJTEUiLCJhbGlhcyI6Im1vYmlsZSIsInBhdGgiOiIvbW9iaWxlIiwiaW5OYXZpZ2F0aW9uIjpmYWxzZSwic3ViTmF2IjpbXX1d",
+		errors: {
+			general: 'Houve um erro ao conectar à página.<br/> Verifique se você não está off-line.',
+				password: 'Nome/combinação de senha incorreta',
+			tryAgain: 'Tente novamente'
+		}
+    });
+    $.extend(Parameters.NavigationAreaParams,{
+        ShowBackToHomeOnInnerPages : true,
+        NavbarSize : 4,
+        NavbarLiveHomePage : "https://www.felipebaterias.com.br:8443/",
+        BlockContainerSelector : ".dmBody",
+        NavbarSelector : "#dmNav:has(a)",
+        SubNavbarSelector : "#subnav_main"
+    });
+    $.extend(Parameters.LayoutParams, {_navigationAnimationStyle : 'slide'});
+    
+    Parameters.NavigationAreaParams.MoreButtonText = 'MORE';
+    
+    Parameters.NavigationAreaParams.LessButtonText = 'LESS';
+    Parameters.HomeLinkText = 'Home';
+    </script>
+
+<script>
+
+    jQuery(window).load(function () {
+        try {
+            jQuery.DM.updateIOSHeight();
+        } catch(e){};
+    });
+</script>
+<script>
+    dmAPI.loadScript('https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js', function() {
+        dmAPI.runOnReady('lozadInit', function() {
+			lozad('.lazy', {
+				threshold: 0.1,
+				loaded: function(element) {
+					if (element.getAttribute('data-background-image')) {
+						element.style.setProperty('background-image', "url('" + element.getAttribute('data-background-image') + "')", "important");
+					}
+				}
+			}).observe();
+        });
+	});
+</script>
+<!--  End Script tags -->
+
+<!--  Site Wide Html Markup -->
+<!--  Site Wide Html Markup -->
+
+</body>
+</html>
+<!--[d1-run-1, 2019-03-07 23:48:52]-->
